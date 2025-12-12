@@ -1,7 +1,7 @@
-/* This is a stub for the House class */
+/* This is the House class */
 
 import java.util.ArrayList;
-
+/* The house class */
 public class House extends Building implements HouseRequirements{
 
   /*

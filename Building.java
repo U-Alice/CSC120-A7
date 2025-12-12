@@ -1,9 +1,15 @@
+/* This is the Building class */
 public class Building implements BuildingRequirements {
 
     protected String name = "<Name Unknown>";
     protected String address = "<Address Unknown>";
     protected int nFloors = 1;
-
+    /*
+     * constructor
+     * param name
+     * param address
+     * param nFloors
+     */
     public Building(String name, String address, int nFloors) {
         if (name != null) { this.name = name; }
         if (address != null) { this.address = address; } 
@@ -12,23 +18,33 @@ public class Building implements BuildingRequirements {
         }
         this.nFloors = nFloors;
     }
-
+    /*
+     * accessors
+     * return name
+     */
     public String getName() {
         return this.name;
     }
-
+    /*
+     * accessors
+     * return address
+     */
     public String getAddress() {
         return this.address;
     }
-
+    /*
+     * accessors
+     * return nFloors
+     */
     public int getFloors() {
         return this.nFloors;
     }
-
+    /*
+     * string representation of building
+     */
     public String toString() {
         return this.name + " is a " + this.nFloors + "-story building located at " + this.address;
     }
-
     public static void main(String[] args) {
         Building fordHall = new Building("Ford Hall", "100 Green Street Northampton, MA 01063", 4);
         System.out.println(fordHall);

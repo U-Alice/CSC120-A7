@@ -1,4 +1,4 @@
-/* This is a stub for the Cafe class */
+/* This is the Cafe class */
 public class Cafe extends Building implements CafeRequirements{
 
     /* Class attributes */
@@ -36,7 +36,6 @@ public class Cafe extends Building implements CafeRequirements{
      * param nSugarPackets
      * param nCreams
      */
-    @Override
     public void sellCoffee(int size, int nSugarPackets, int nCreams) {
         if((this.nCoffeeOunces -= size) <= 0){
             this.restock(100, 0, 0, 0);
@@ -54,7 +53,6 @@ public class Cafe extends Building implements CafeRequirements{
         this.nSugarPackets -= nSugarPackets;
         this.nCreams -= nCreams;
         this.nCups -= 1;
-        this.restock(size, nSugarPackets, nCreams, nCups);
     }
 
     /*

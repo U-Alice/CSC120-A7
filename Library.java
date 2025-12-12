@@ -1,7 +1,7 @@
 /* This is a stub for the Library class */
 
 import java.util.Hashtable;
-
+/* The library class */
 public class Library extends Building implements LibraryRequirements {
     /* Class attributes */
     private Hashtable<String, Boolean> collection;
@@ -27,7 +27,7 @@ public class Library extends Building implements LibraryRequirements {
     @Override
     public void addTitle(String title) {
       if(collection.get(title) != null){
-        throw new RuntimeException("Title already exists, please update!");
+        throw new RuntimeException("Title already exists, please update instead!");
       }
       collection.put(title, true);
     }
@@ -83,7 +83,7 @@ public class Library extends Building implements LibraryRequirements {
      return collection.get(title);
     }
     /*
-     * prints the collaection
+     * prints the collection
      */
     @Override
     public void printCollection() {
